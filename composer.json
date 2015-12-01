@@ -17,11 +17,11 @@
     ],
     "require": {
         "composer/installers": "^1.0.20",
+        "drupal-composer/drupal-scaffold": "dev-master",
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "8.0.*",
         "drush/drush": "dev-master",
-        "drupal/console": "dev-master",
-        "drupal-composer/drupal-scaffold": "dev-master"
+        "drupal/console": "dev-master"
     },
     "require-dev": {
         "behat/mink": "~1.6",
@@ -30,8 +30,7 @@
         "jcalderonzumba/mink-phantomjs-driver": "dev-master#10d7c48c9a4129463052321b52450d98983c4332",
         "mikey179/vfsStream": "~1.2",
         "phpunit/phpunit": "~4.8",
-        "symfony/css-selector": "2.7.*",
-        "codegyre/robo": "^0.6.0"
+        "symfony/css-selector": "2.7.*"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
