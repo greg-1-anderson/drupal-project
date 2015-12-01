@@ -20,7 +20,8 @@
         "cweagans/composer-patches": "~1.0",
         "drupal/core": "8.0.*",
         "drush/drush": "dev-master",
-        "drupal/console": "dev-master"
+        "drupal/console": "dev-master",
+        "drupal-composer/drupal-scaffold": "dev-master"
     },
     "require-dev": {
         "behat/mink": "~1.6",
@@ -35,11 +36,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "post-install-cmd": "sh ./scripts/composer/post-install.sh",
-        "pre-update-cmd": "composer robo version:dump",
-        "post-update-cmd": "composer robo update:if-newer-version",
-        "robo": "robo --load-from $(pwd)/scripts/drupal",
-        "update-scaffold": "robo --load-from $(pwd)/scripts/drupal update"
+        "post-install-cmd": "sh ./scripts/composer/post-install.sh"
     },
     "extra": {
         "installer-paths": {
