@@ -48,7 +48,11 @@
     },
     "extra": {
         "drupal-scaffold": {
-            "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz"
+            "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz",
+            "includes": [
+              "sites/default/settings.pantheon.php",
+              "sites/default/settings.php"
+            ]
         },
         "installer-paths": {
             "web/core": ["type:drupal-core"],
