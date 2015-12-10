@@ -42,6 +42,10 @@
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-install-cmd": "sh ./scripts/composer/post-install.sh"
     },
+    "config": {
+        "bin-dir": "bin/",
+        "vendor-dir": "web/sites/all/vendor"
+    },
     "extra": {
         "drupal-scaffold": {
             "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz",
