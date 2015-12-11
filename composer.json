@@ -39,8 +39,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
-        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
-        "post-install-cmd": "sh ./scripts/composer/post-install.sh"
+        "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold"
     },
     "config": {
         "bin-dir": "bin/",
