@@ -39,6 +39,7 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "scripts": {
+        "post-autoload-dump": "sh ./scripts/pantheon/post-autoload-dump.sh",
         "drupal-scaffold": "DrupalComposer\\DrupalScaffold\\Plugin::scaffold",
         "post-install-cmd": "sh ./scripts/composer/post-install.sh"
     },
