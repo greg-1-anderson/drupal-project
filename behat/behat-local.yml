@@ -22,6 +22,6 @@ default:
       blackbox: ~
       api_driver: 'drush'
       drupal:
-        drupal_root: '../web'
+        drupal_root: '../code'
       drush:
         alias: '@localtest'
