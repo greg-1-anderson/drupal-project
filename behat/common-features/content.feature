@@ -4,6 +4,20 @@ Feature: Content
   I need to be able to see that the Drupal and Drush drivers are working
 
   @api
+  Scenario: Create nodes with specific authorship
+    Given users:
+    | name      | mail             | status |
+    | User Fred | fred@example.com | 1      |
+    And "article" content:
+    | title           | author    | promote |
+    | Article by Fred | User Fred | 1       |
+    When I am logged in as a user with the "administrator" role
+    And I am on the homepage
+    And I follow "Article by Fred"
+    Then I should see "Article by Fred"
+    And I should see the link "User Fred"
+
+  @api
   Scenario: Create a node
     Given I am logged in as a user with the "administrator" role
     When I am viewing an "article" content with the title "My article"
@@ -26,16 +40,17 @@ Feature: Content
     And I should see "First article"
     And I should see "Second article"
 
-# Setting the body field contents does not seem to be effective
+  @api
+  Scenario: Create nodes with fields
+    Given "article" content:
+    | title                     | promote | body             |
+    | First article with fields |       1 | PLACEHOLDER BODY |
+    When I am on the homepage
+    And follow "First article with fields"
+    Then I should see the text "PLACEHOLDER BODY"
 
-#  @api
-#  Scenario: Create nodes with fields
-#    Given "article" content:
-#    | title                     | promote | body             |
-#    | First article with fields |       1 | PLACEHOLDER BODY |
-#    When I am on the homepage
-#    And follow "First article with fields"
-#    Then I should see the text "PLACEHOLDER BODY"
+
+# "Given I am viewing" does not seem to view the created article
 
 #  @api
 #  Scenario: Create and view a node with fields
@@ -79,16 +94,4 @@ Feature: Content
     Then I should see "Tag one"
     And I should see "Tag two"
 
-  @api
-  Scenario: Create nodes with specific authorship
-    Given users:
-    | name     | mail            | status |
-    | Joe User | joe@example.com | 1      |
-    And "article" content:
-    | title          | author   | promote |
-    | Article by Joe | Joe User | 1       |
-    When I am logged in as a user with the "administrator" role
-    And I am on the homepage
-    And I follow "Article by Joe"
-    Then I should see the link "Joe User"
 
