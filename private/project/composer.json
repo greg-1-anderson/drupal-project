@@ -1,6 +1,6 @@
 {
     "name": "drupal-composer/drupal-project",
-    "description": "Project template for Drupal 8 projects with composer",
+    "description": "Project template for Drupal 8 projects with composer on Pantheon",
     "type": "project",
     "license": "GPL-2.0+",
     "authors": [
@@ -43,11 +43,14 @@
     },
     "extra": {
         "installer-paths": {
-            "web/core": ["type:drupal-core"],
-            "web/modules/contrib/{$name}": ["type:drupal-module"],
-            "web/profiles/contrib/{$name}": ["type:drupal-profile"],
-            "web/themes/contrib/{$name}": ["type:drupal-theme"],
-            "drush/contrib/{$name}": ["type:drupal-drush"]
+            "../../core": ["type:drupal-core"],
+            "../../modules/contrib/{$name}": ["type:drupal-module"],
+            "../../profiles/contrib/{$name}": ["type:drupal-profile"],
+            "../../themes/contrib/{$name}": ["type:drupal-theme"],
+            "../../drush/contrib/{$name}": ["type:drupal-drush"]
+        },
+        "drupal-scaffold": {
+            "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz"
         }
     }
 }
