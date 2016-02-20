@@ -50,7 +50,11 @@
             "../../drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "drupal-scaffold": {
-            "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz"
+            "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz",
+            "includes": [
+                "sites/default/settings.php",
+                "sites/default/settings.pantheon.php"
+            ]
         }
     }
 }
