@@ -43,11 +43,11 @@
     },
     "extra": {
         "installer-paths": {
-            "../../core": ["type:drupal-core"],
-            "../../modules/contrib/{$name}": ["type:drupal-module"],
-            "../../profiles/contrib/{$name}": ["type:drupal-profile"],
-            "../../themes/contrib/{$name}": ["type:drupal-theme"],
-            "../../drush/contrib/{$name}": ["type:drupal-drush"]
+            "../core": ["type:drupal-core"],
+            "../modules/contrib/{$name}": ["type:drupal-module"],
+            "../profiles/contrib/{$name}": ["type:drupal-profile"],
+            "../themes/contrib/{$name}": ["type:drupal-theme"],
+            "../drush/contrib/{$name}": ["type:drupal-drush"]
         },
         "drupal-scaffold": {
             "source": "https://github.com/pantheon-systems/drops-8/archive/{version}.tar.gz",

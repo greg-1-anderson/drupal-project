@@ -1,6 +1,6 @@
 #!/bin/sh
 
-DOCUMENTROOT=../..
+DOCUMENTROOT=..
 
 # Prepare the scaffold files if they are not already present
 if [ ! -f $DOCUMENTROOT/autoload.php ]
