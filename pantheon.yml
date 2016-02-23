@@ -1,0 +1,8 @@
+api_version: 1
+
+workflows:
+  sync_code:
+    after:
+      - type: webphp
+        description: Push changes back to GitHub if needed
+        script: private/scripts/pantheon/push-back-to-lean.php
