@@ -41,7 +41,7 @@
  */
 $repositoryRoot = dirname(__DIR__);
 $bindingDir = dirname($repositoryRoot); // or $_SERVER['HOME']
-$composerRoot = "$projectRoot/private";
+$composerRoot = "$repositoryRoot/private";
 
 include_once "$repositoryRoot/private/scripts/pantheon/lean-repo-utils.php";
 
@@ -84,7 +84,7 @@ if (empty($remoteBranch)) {
 }
 
 chdir($repositoryRoot);
-pantheon_process_github_webhook($githubUrl);
+pantheon_process_github_webhook($githubUrl, $remoteBranch);
 
 // If composer.lock has been committed, then run `composer install`
 // Note that `composer update` requires too much memory to run here,
