@@ -1,4 +1,12 @@
-# Composer template for Drupal projects
+# Pantheon Drupal Composer Project
+
+This is an unadvertised, unsupported fork of drupal-composer/drupal-project.
+
+This is a work in progress; it is being committed so that end-to-end testing, including project creation may be done. Testing now in progress; probably does not work yet.  Probably will work soon.  Look for a more permanent home in the future at pantheon-systems/drupal-project.
+
+Based on https://github.com/joshkoenig/lean-and-mean.git
+
+## Original README for Composer template for Drupal projects
 
 [![Build Status](https://travis-ci.org/drupal-composer/drupal-project.svg?branch=8.x)](https://travis-ci.org/drupal-composer/drupal-project)
 
